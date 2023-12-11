@@ -43,6 +43,9 @@ public class Order {
     protected Order() {
     }
 
+    /**
+     * 도메인 객체가 불완전한 상태로 사용되는 것을 막기 위해 생성자를 통해 필요한 데이터를 모두 받자.
+     */
     public Order(OrderNo number, Orderer orderer, List<OrderLine> orderLines,
                  ShippingInfo shippingInfo, OrderState state) {
         setNumber(number);
