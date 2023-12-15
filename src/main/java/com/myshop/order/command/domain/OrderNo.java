@@ -5,6 +5,9 @@ import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * 식별자를 위한 밸류 타입
+ */
 @Embeddable
 public class OrderNo implements Serializable {
     @Column(name = "order_number")

@@ -67,6 +67,7 @@ public class Member {
         Events.raise(new MemberUnblockedEvent(id.getId()));
     }
 
+    // 루트 엔티티는 애그리거트 내부의 다른 객체(password)를 조합해서 기능을 완성
     public void changePassword(String oldPw, String newPw) {
         if (!password.match(oldPw)) {
             throw new IdPasswordNotMatchingException();

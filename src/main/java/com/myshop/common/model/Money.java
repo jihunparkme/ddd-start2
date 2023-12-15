@@ -14,6 +14,9 @@ public class Money {
         return value;
     }
 
+    /**
+     * 밸류 타입을 위한 기능
+     */
     public Money multiply(int multiplier) {
         return new Money(value * multiplier);
     }
@@ -23,6 +26,9 @@ public class Money {
         return Integer.toString(value);
     }
 
+    /**
+     * 두 밸류 객체를 비교할 때는 모든 속성이 같은지 비교
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

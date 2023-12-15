@@ -4,6 +4,10 @@ import com.myshop.common.model.Address;
 
 import javax.persistence.*;
 
+/**
+ * 밸류 타입
+ * - 밸류 타입은 불변으로 구현
+ */
 @Embeddable
 public class ShippingInfo {
     @Embedded

@@ -3,6 +3,9 @@ package com.myshop.common.model;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+/**
+ * 밸류 타입
+ */
 @Embeddable
 public class Address {
     @Column(name = "zip_code")
