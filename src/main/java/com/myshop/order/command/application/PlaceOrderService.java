@@ -30,6 +30,7 @@ public class PlaceOrderService {
     @Transactional
     public OrderNo placeOrder(OrderRequest orderRequest) {
         List<ValidationError> errors = validateOrderRequest(orderRequest);
+        // 응용 서비스가 입력 오류를 하나의 익셉션으로 모아서 발생
         if (!errors.isEmpty()) throw new ValidationErrorException(errors);
 
         List<OrderLine> orderLines = new ArrayList<>();
