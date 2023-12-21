@@ -81,6 +81,7 @@ public class OrderController {
             modelMap.addAttribute("orderNo", orderNo.getNumber());
             return "order/orderComplete";
         } catch (ValidationErrorException e) {
+            // 응용 서비스가 발생시킨 검증 에러 목록을 뷰에서 사용할 형태로 변환
             e.getErrors().forEach(err -> {
                 if (err.hasName()) {
                     bindingResult.rejectValue(err.getName(), err.getCode());
